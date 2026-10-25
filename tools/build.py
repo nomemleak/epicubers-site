@@ -326,30 +326,51 @@ body = head("Quel cube acheter ?", "Un seul modèle conseillé, et comment évit
     <div class="note">
       <p><strong>L’exception : Atoutcubes.</strong> Cette boutique française (basée à Bayonne, stock en France) vend le Dayan Guhong à un prix correct, 15,90 € au 25 octobre 2026, avec une livraison en 1 à 3 jours ouvrés. Dans ce cas, passer par elle vaut quand même le coup. Les prix peuvent changer : <a href="{ATOUT_GUHONG}">voir la fiche sur Atoutcubes</a>.</p>
     </div>
+    <div class="note">
+      <p><strong>Pour tous les autres cubes :</strong> toujours comparer le prix en boutique avec celui d’AliExpress, pour voir si on ne se fait pas arnaquer. Si l’écart est important, mieux vaut le prendre sur AliExpress.</p>
+    </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2>Le cube conseillé : Dayan Guhong Pro M</h2>
-    <p>Un seul cube est conseillé, volontairement : il est imbattable en rapport qualité-prix, et choisir entre dix modèles ne sert à rien quand l’un d’eux fait déjà tout bien.</p>
+    <h2>Le cube conseillé : Dayan Guhong M, en MagLev</h2>
+    <p>Un seul cube est conseillé, volontairement : son rapport qualité-prix est dingue, et choisir entre dix modèles ne sert à rien quand l’un d’eux fait déjà tout bien. La version à prendre est la <strong>MagLev</strong>.</p>
     <div class="pick">
       <figure>
-        <img src="assets/guhong-pro-m.jpg" onerror="this.onerror=null;this.src='assets/cube.svg'" alt="Le Dayan Guhong Pro M 3x3" width="340" height="330">
+        <img src="assets/guhong-pro-m.jpg" onerror="this.onerror=null;this.src='assets/cube.svg'" alt="Le Dayan Guhong M 3x3, face blanche, faces verte et rouge" width="800" height="800">
       </figure>
       <div>
         <p class="price">Environ 16 €</p>
         <ul class="clean">
-          <li>Magnétique, avec des aimants dans les pièces et dans le noyau.</li>
+          <li><strong>MagLev</strong> : 94 aimants et aucun ressort.</li>
           <li>Tension réglable.</li>
           <li>Stickerless, finition brillante.</li>
           <li>Trois tailles : 54, 55 ou 56 mm.</li>
-          <li>Deux versions : standard avec ressorts (64 aimants), ou MagLev sans ressorts (94 aimants).</li>
         </ul>
-        <p class="muted">Atoutcubes l’affiche sous le nom « GuHong Pro+ M ». Les caractéristiques viennent de sa fiche.</p>
+        <p class="muted">Selon les boutiques, il s’appelle « Guhong Pro M » ou « Guhong Pro+ M » : tant que c’est un Guhong M, c’est le bon. Prix relevé chez Atoutcubes le 25 octobre 2026 (la fiche n’indique pas de prix distinct pour le MagLev). Les caractéristiques viennent de sa fiche.</p>
         <div class="btns"><a class="btn primary" href="{ATOUT_GUHONG}">Voir sur Atoutcubes</a></div>
       </div>
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Magnétique, MagLev… de quoi parle-t-on ?</h2>
+    <p>Quelques mots reviennent dans toutes les fiches de cubes. Les voici en clair.</p>
+    <dl class="brands">
+      <dt>Cube magnétique</dt>
+      <dd>Des aimants sont placés dans les pièces. Ils aident chaque face à se caler exactement après un quart de tour, ce qui rend les rotations plus précises.</dd>
+      <dt>Aimants de noyau (core magnets)</dt>
+      <dd>Des aimants situés dans le noyau, au centre du cube, qui retiennent les pièces. Selon les modèles, leur force est réglable : plus elle est élevée, plus le cube « s’accroche » à chaque position.</dd>
+      <dt>Ressorts et compression</dt>
+      <dd>Sur un cube classique, des ressorts maintiennent les pièces ensemble. Les vis règlent la compression : plus elle est forte, plus le cube est serré.</dd>
+      <dt>Tension</dt>
+      <dd>La façon dont les pièces sont tenues entre elles : un cube tendu est plus contrôlable, un cube lâche tourne plus librement mais risque de « popper ». Sur le Guhong, elle se règle avec une molette.</dd>
+      <dt>MagLev (lévitation magnétique)</dt>
+      <dd>Les ressorts sont remplacés par des aimants dont les mêmes pôles se font face : ils se repoussent, et c’est cette répulsion qui assure la compression. Il y a moins de frottements, donc un cube plus libre et plus rapide. C’est ce qui rend la version MagLev du Guhong si intéressante pour son prix.</dd>
+    </dl>
   </div>
 </section>
 
@@ -377,12 +398,12 @@ body = head("Quel cube acheter ?", "Un seul modèle conseillé, et comment évit
       <dt>GAN</dt>
       <dd>Le Apple des Rubik’s cubes : des cubes très aboutis, mais souvent plus chers.</dd>
     </dl>
-    <p style="margin-top:20px">Aucune autre marque n’est conseillée ici : pour débuter comme pour progresser, le Guhong Pro M suffit.</p>
+    <p style="margin-top:20px">Aucune autre marque n’est conseillée ici : pour débuter comme pour progresser, le Guhong M en MagLev suffit. Pour tout autre cube, comparer toujours avec le prix d’AliExpress.</p>
   </div>
 </section>
 """
 page("cubes.html", "Quel speedcube acheter ? — EpiCubers",
-     "Le cube conseillé (Dayan Guhong Pro M), comment choisir la taille, où le commander et pourquoi éviter les marges des boutiques.", body)
+     "Le cube conseillé (Dayan Guhong M en MagLev), comment choisir la taille, où le commander et pourquoi éviter les marges des boutiques.", body)
 
 # ---------------------------------------------------------------- METHODES (page de comparaison)
 body = head("Les méthodes", "Trois niveaux, du premier cube résolu aux temps de compétition.") + """
@@ -575,6 +596,7 @@ page("liens.html", "Liens utiles du speedcubing — EpiCubers",
 
 # ---------------------------------------------------------------- GLOSSAIRE
 G = [
+    ("Aimants de noyau (core magnets)", "Des aimants situés dans le noyau du cube, qui retiennent les pièces. Leur force est parfois réglable."),
     ("Algo (algorithme)", "Une séquence de mouvements à connaître par cœur, qui produit un effet précis sur le cube."),
     ("AoX", "Average of X : moyenne élaguée sur X temps, avec les meilleurs et les pires temps retirés. Exemples : ao5, ao12, ao100."),
     ("ao5", "La moyenne officielle d’une compétition sur le 3x3 : on retire le meilleur et le pire de cinq résolutions, et on fait la moyenne des trois autres."),
@@ -589,7 +611,9 @@ G = [
     ("Lookahead", "Repérer la prochaine pièce à placer pendant qu’on exécute la précédente, pour ne pas s’arrêter."),
     ("Lubrifiant", "Un produit qu’on met à l’intérieur du cube pour le faire tourner plus vite et plus doucement."),
     ("Magnétique", "Un cube équipé d’aimants dans les pièces, qui l’aident à se centrer sur chaque face."),
-    ("MagLev", "Une technologie qui remplace les ressorts d’un cube par des aimants, pour réduire les frottements."),
+    ("MagLev", "Une technologie qui remplace les ressorts d’un cube par des aimants qui se repoussent, pour réduire les frottements."),
+    ("Ressorts", "Sur un cube classique, ils maintiennent les pièces ensemble. Un cube MagLev n’en a pas."),
+    ("Tension / compression", "Le serrage des pièces entre elles, réglable avec des vis ou une molette selon le modèle."),
     ("Mélange (scramble)", "La suite de mouvements générée au hasard qu’on applique avant chaque résolution."),
     ("OH", "One-handed : résolution à une main."),
     ("OLL", "Orientation of the Last Layer : mettre toute la dernière face de la même couleur."),

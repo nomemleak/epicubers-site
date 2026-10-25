@@ -44,7 +44,7 @@ Les fichiers `.html` peuvent aussi être édités directement pour une retouche 
 
 ### Photo du cube conseillé
 
-La page `cubes.html` affiche `assets/guhong-pro-m.jpg` si le fichier existe, et l'illustration `assets/cube.svg` sinon. Pour mettre la vraie photo, il suffit de déposer l'image sous ce nom dans `assets/`.
+La page `cubes.html` affiche `assets/guhong-pro-m.jpg`. Si le fichier manque, l'illustration `assets/cube.svg` prend le relais. Pour changer la photo, remplacer l'image sous ce nom dans `assets/`.
 
 ## À savoir
 
