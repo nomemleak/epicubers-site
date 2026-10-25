@@ -241,7 +241,7 @@ body = head("Le speedcubing", "Résoudre un Rubik’s cube, le plus vite possibl
     <h2>S’entraîner</h2>
     <p>Quelques habitudes qui font vraiment progresser :</p>
     <ul class="clean">
-      <li>se chronométrer avec des mélanges officiels, par exemple sur <a href="https://cstimer.net/">csTimer</a> ;</li>
+      <li>se chronométrer avec des mélanges officiels, par exemple sur <a href="https://cstimer.net/">csTimer</a>, la référence, ou sur <a href="https://cubedesk.io/">CubeDesk</a>, qui propose en plus des duels et un entraîneur d’algorithmes ;</li>
       <li>regarder ses résolutions, pas seulement son temps : à quel endroit s’arrête-t-on ?</li>
       <li>apprendre un algorithme à la fois et le répéter jusqu’à ce qu’il passe tout seul ;</li>
       <li>échanger avec d’autres cubeurs : voir quelqu’un d’autre tourner apprend plus que dix vidéos.</li>
@@ -582,6 +582,7 @@ body = head("Liens utiles", "Les sites que tout cubeur finit par avoir en favori
     <div class="grid c2">
       <a class="card" href="https://www.worldcubeassociation.org/"><h3>World Cube Association</h3><p>Le site officiel des compétitions. Les prochaines compétitions dans le monde, l’inscription, les résultats, les classements et le profil de chaque compétiteur.</p><span class="go">worldcubeassociation.org</span></a>
       <a class="card" href="https://cstimer.net/"><h3>csTimer</h3><p>Un chronomètre très complet, avec des mélanges officiels, de nombreuses statistiques et beaucoup d’options.</p><span class="go">cstimer.net</span></a>
+      <a class="card" href="https://cubedesk.io/"><h3>CubeDesk</h3><p>Un chronomètre en ligne qui propose en plus des duels 1v1, un entraîneur d’algorithmes, des classements et des mini-jeux. Un compte est nécessaire pour sauvegarder ses résolutions. Pour certains, il a un peu dépassé csTimer, même si csTimer reste la référence.</p><span class="go">cubedesk.io</span></a>
       <a class="card" href="https://speedcubedb.com/"><h3>SpeedCubeDB</h3><p>Une immense base de données : des milliers d’algorithmes, classés par étape et par méthode, pour s’améliorer.</p><span class="go">speedcubedb.com</span></a>
       <a class="card" href="https://www.speedsolving.com/wiki/index.php/Main_Page"><h3>Le wiki de SpeedSolving</h3><p>Le « Wikipédia du speedcubing » : méthodes, tutoriels, histoire, matériel.</p><span class="go">speedsolving.com</span></a>
       <a class="card" href="https://alg.cubing.net/"><h3>alg.cubing.net</h3><p>Pour reconstruire une résolution. Le cube 3D suit les mouvements saisis, ce qui est idéal pour analyser un solve.</p><span class="go">alg.cubing.net</span></a>
