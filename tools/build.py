@@ -12,6 +12,7 @@ NAV = [
     ("index.html", "Accueil"),
     ("speedcubing.html", "Le speedcubing"),
     ("methodes.html", "Méthodes"),
+    ("notation.html", "Notation"),
     ("cubes.html", "Cubes"),
     ("communaute.html", "Communauté"),
     ("liens.html", "Liens"),
@@ -477,8 +478,7 @@ step(5, "orange", "Les arêtes jaunes",
      + algo("Aligner les arêtes", "R U R' U R U2 R' U"))
 
 step(6, "red", "Les coins jaunes",
-     """<div class="note draft"><p><span class="tag">À confirmer</span>Cette étape est la partie propre à la méthode du serveur : les coins ne sont pas mis à leur place avant d’être orientés, ils sont placés au fur et à mesure. La description est à compléter.</p></div>
-<p><strong>Retourner le cube</strong> : la face jaune passe en bas. Placer les coins jaunes un par un : tourner D pour amener le coin au-dessus de son emplacement, puis répéter le sexy move jusqu’à ce que le coin soit en place. Les couches du haut se mélangent en route, c’est normal.</p>"""
+     """<p><strong>Retourner le cube</strong> : la face jaune passe en bas. Placer les coins jaunes un par un : tourner D pour amener le coin au-dessus de son emplacement, puis répéter le sexy move jusqu’à ce que le coin soit en place. Les couches du haut se mélangent en route, c’est normal.</p>"""
      + algo("Le sexy move, encore", M_SEXY, player=False)
      + """<h3>Le cas particulier</h3>
 <p>Il peut rester deux coins côte à côte qui ne sont pas résolus. Il suffit de refaire la même chose : les placer en bas, puis répéter le sexy move jusqu’à ce qu’ils soient bien placés.</p>
@@ -495,9 +495,9 @@ notation = """
       <li>l’algorithme des <strong>arêtes jaunes</strong>, <kbd>R U R' U R U2 R' U</kbd>.</li>
     </ul>
     <h2 style="margin-top:36px">Lire les algorithmes</h2>
+    <p>Les lettres des algorithmes suivent la notation internationale. <a href="notation.html">La page Notation</a> l’explique en détail, avec des animations.</p>
     <p>Chaque lettre est une face du cube, vue de face : <kbd>R</kbd> droite, <kbd>L</kbd> gauche, <kbd>U</kbd> haut, <kbd>D</kbd> bas, <kbd>F</kbd> devant, <kbd>B</kbd> derrière. Une lettre seule, c’est un quart de tour dans le sens des aiguilles d’une montre en regardant cette face. Une apostrophe (<kbd>R'</kbd>) inverse le sens, et un 2 (<kbd>U2</kbd>) fait un demi-tour.</p>
     <p>Chaque algorithme est animé en 3D : un appui sur lecture montre la séquence, et le cube peut être tourné en le faisant glisser.</p>
-    <div class="note draft"><p><span class="tag">Version provisoire</span>Cette méthode est en cours de relecture, surtout la dernière étape.</p></div>
   </div>
 </section>
 """
@@ -575,6 +575,133 @@ body = head("CFOP complète", "La méthode des cubeurs rapides : 78 à 160 algor
 page("cfop.html", "CFOP complète : la méthode Fridrich — EpiCubers",
      "La CFOP complète en quatre étapes, avec un renvoi vers SpeedCubeDB pour tous les algorithmes.", body, active="methodes.html")
 
+
+# ---------------------------------------------------------------- NOTATION
+def demo(moves, title, text):
+    return f"""<div class="card demo">
+  <h3><code class="mv">{title}</code></h3>
+  <p>{text}</p>
+  <div class="player-box"><twisty-player alg="{moves}" visualization="3D" background="none" control-panel="bottom-row" hint-facelets="none"></twisty-player></div>
+</div>"""
+
+
+NET = """<svg class="net" viewBox="0 0 250 190" role="img" aria-labelledby="net-t net-d">
+<title id="net-t">Les six faces du cube à plat</title>
+<desc id="net-d">U en haut, puis L, F, R et B en ligne, puis D en bas.</desc>
+<g font-family="JetBrains Mono, monospace" font-size="26" font-weight="700" text-anchor="middle" fill="#15132a" stroke="#15132a" stroke-width="3" stroke-linejoin="round">
+<rect x="65" y="5" width="55" height="55" rx="6" fill="#f4f4f4"/><text x="92.5" y="43" stroke="none">U</text>
+<rect x="5" y="65" width="55" height="55" rx="6" fill="#dc7f1a"/><text x="32.5" y="103" stroke="none">L</text>
+<rect x="65" y="65" width="55" height="55" rx="6" fill="#18c52b"/><text x="92.5" y="103" stroke="none">F</text>
+<rect x="125" y="65" width="55" height="55" rx="6" fill="#d91c1c"/><text x="152.5" y="103" stroke="none">R</text>
+<rect x="185" y="65" width="55" height="55" rx="6" fill="#1a87db"/><text x="212.5" y="103" stroke="none">B</text>
+<rect x="65" y="125" width="55" height="55" rx="6" fill="#d8cb1a"/><text x="92.5" y="163" stroke="none">D</text>
+</g></svg>"""
+
+body = head("La notation", "Lire un algorithme : les lettres, les apostrophes et les chiffres.") + f"""
+<section>
+  <div class="wrap">
+    <h2>Les six faces</h2>
+    <p class="lead">Chaque mouvement est décrit par une lettre : celle de la face qui tourne. C’est la notation internationale, la même partout dans le monde (WCA, SpeedCubeDB, csTimer…).</p>
+    <div class="pick">
+      <figure style="background:var(--ink-3)">{NET}</figure>
+      <div>
+        <p>Le cube se tient avec la face <strong>F</strong> (Front) tournée vers soi et la face <strong>U</strong> (Up) sur le dessus. Les autres faces s’en déduisent.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Lettre</th><th>Anglais</th><th>Face</th></tr></thead>
+          <tbody>
+            <tr><td><kbd>U</kbd></td><td>Up</td><td>Dessus</td></tr>
+            <tr><td><kbd>D</kbd></td><td>Down</td><td>Dessous</td></tr>
+            <tr><td><kbd>F</kbd></td><td>Front</td><td>Devant</td></tr>
+            <tr><td><kbd>B</kbd></td><td>Back</td><td>Derrière</td></tr>
+            <tr><td><kbd>R</kbd></td><td>Right</td><td>Droite</td></tr>
+            <tr><td><kbd>L</kbd></td><td>Left</td><td>Gauche</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Le sens du mouvement</h2>
+    <p>Une lettre seule, c’est un <strong>quart de tour dans le sens des aiguilles d’une montre</strong>, en regardant la face concernée de face. C’est le point de vue de cette face qui compte, pas celui de la personne qui tient le cube : pour <kbd>L</kbd> ou <kbd>B</kbd>, le sens a l’air inversé vu de devant.</p>
+    <ul class="clean">
+      <li>une <strong>apostrophe</strong> (<kbd>R'</kbd>, qui se lit « R prime ») : quart de tour dans l’autre sens ;</li>
+      <li>un <strong>2</strong> (<kbd>R2</kbd>) : demi-tour. Le sens n’a pas d’importance, <kbd>R2</kbd> et <kbd>R2'</kbd> sont identiques.</li>
+    </ul>
+    <p>Le bouton de lecture de chaque animation part d’un cube résolu et montre le mouvement. Le cube se fait tourner en le faisant glisser.</p>
+    <div class="grid c3">
+      {demo("R", "R", "La face de droite fait un quart de tour horaire : le côté qui fait face monte.")}
+      {demo("R'", "R'", "Le même quart de tour, dans l’autre sens : le côté qui fait face descend.")}
+      {demo("R2", "R2", "Un demi-tour de la face de droite.")}
+      {demo("U", "U", "La face du dessus tourne : le devant part vers la gauche.")}
+      {demo("F", "F", "La face de devant tourne dans le sens horaire, comme vue de face.")}
+      {demo("L", "L", "La face de gauche, horaire vue depuis la gauche : le côté qui fait face descend.")}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Lire un algorithme</h2>
+    <p>Un algorithme se lit de gauche à droite, un mouvement après l’autre. Les espaces séparent les mouvements.</p>
+    <p>Le sexy move <kbd>R U R' U'</kbd> se lit : <em>R</em>, puis <em>U</em>, puis <em>R'</em>, puis <em>U'</em>.</p>
+    <div class="algo">
+      <div class="algo-top"><span class="algo-name">Le sexy move</span><button class="copy" type="button">Copier</button></div>
+      <code>R U R' U'</code>
+      <div class="player-box"><twisty-player alg="R U R' U'" visualization="3D" background="none" control-panel="bottom-row" hint-facelets="none"></twisty-player></div>
+    </div>
+    <p>Des <strong>parenthèses</strong> regroupent une séquence, et un chiffre derrière indique combien de fois la répéter : <kbd>(R U R' U')3</kbd> veut dire le sexy move trois fois de suite.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Les autres mouvements</h2>
+    <h3>Les mouvements larges</h3>
+    <p>Une lettre minuscule (<kbd>r</kbd>) ou suivie d’un <kbd>w</kbd> (<kbd>Rw</kbd>) fait tourner la face <strong>et la couche du milieu</strong> en même temps, dans le même sens que la face. Les deux écritures sont équivalentes, avec l’apostrophe et le 2 qui s’utilisent pareil (<kbd>Rw'</kbd>, <kbd>r2</kbd>).</p>
+    <div class="grid c3">
+      {demo("Rw", "Rw  ou  r", "Les deux couches de droite tournent ensemble, dans le sens de R.")}
+      {demo("Uw", "Uw  ou  u", "Les deux couches du haut tournent ensemble, dans le sens de U.")}
+    </div>
+
+    <h3 style="margin-top:36px">Les tranches</h3>
+    <p>Trois lettres désignent la couche du milieu, celle qui n’a pas de face à elle :</p>
+    <ul class="clean">
+      <li><kbd>M</kbd> (Middle) : entre L et R, dans le sens de <kbd>L</kbd> ;</li>
+      <li><kbd>E</kbd> (Equator) : entre U et D, dans le sens de <kbd>D</kbd> ;</li>
+      <li><kbd>S</kbd> (Standing) : entre F et B, dans le sens de <kbd>F</kbd>.</li>
+    </ul>
+    <div class="grid c3">
+      {demo("M", "M", "La tranche du milieu entre gauche et droite, dans le sens de L.")}
+      {demo("E", "E", "La tranche entre le dessus et le dessous, dans le sens de D.")}
+      {demo("S", "S", "La tranche entre le devant et le derrière, dans le sens de F.")}
+    </div>
+
+    <h3 style="margin-top:36px">Les rotations du cube entier</h3>
+    <p>Trois lettres minuscules font tourner <strong>tout le cube</strong>, sans changer sa résolution : <kbd>x</kbd> dans le sens de <kbd>R</kbd>, <kbd>y</kbd> dans le sens de <kbd>U</kbd> et <kbd>z</kbd> dans le sens de <kbd>F</kbd>. L’apostrophe et le 2 s’utilisent pareil (<kbd>x'</kbd>, <kbd>y2</kbd>). Elles servent à changer la face tenue devant ou dessus, par exemple pour retourner le cube avec <kbd>x2</kbd>.</p>
+    <div class="grid c3">
+      {demo("x", "x", "Tout le cube tourne comme R : la face de devant passe sur le dessus.")}
+      {demo("y", "y", "Tout le cube tourne comme U : la face de devant passe à gauche.")}
+      {demo("z", "z", "Tout le cube tourne comme F : la face de droite passe sur le dessus.")}
+    </div>
+    <div class="note"><p>Sur les cubes plus grands (4x4 et plus), un chiffre devant la lettre désigne une couche intérieure, par exemple <kbd>2R</kbd>. Cela ne sert pas sur un 3x3.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Pour s’exercer</h2>
+    <p>Le site <a href="https://alg.cubing.net/">alg.cubing.net</a> anime n’importe quel algorithme saisi : un bon moyen de vérifier qu’une séquence a été bien lue. Les algorithmes de la <a href="methode-debutant.html">méthode débutant</a> sont tous écrits dans cette notation.</p>
+    <div class="btns"><a class="btn primary" href="methode-debutant.html">Voir la méthode débutant</a><a class="btn" href="glossaire.html">Le glossaire</a></div>
+  </div>
+</section>
+"""
+page("notation.html", "La notation du Rubik’s cube — EpiCubers",
+     "La notation internationale du Rubik’s cube : faces, quarts de tour, apostrophes, mouvements larges, tranches et rotations, avec animations 3D.",
+     body, head_extra=TWISTY)
+
 # ---------------------------------------------------------------- LIENS
 body = head("Liens utiles", "Les sites que tout cubeur finit par avoir en favori.") + f"""
 <section>
@@ -616,6 +743,7 @@ G = [
     ("Ressorts", "Sur un cube classique, ils maintiennent les pièces ensemble. Un cube MagLev n’en a pas."),
     ("Tension / compression", "Le serrage des pièces entre elles, réglable avec des vis ou une molette selon le modèle."),
     ("Mélange (scramble)", "La suite de mouvements générée au hasard qu’on applique avant chaque résolution."),
+    ("Notation", "Le système de lettres (R, U, F…) qui décrit les mouvements. <a href=\"notation.html\">Voir la page Notation</a>."),
     ("OH", "One-handed : résolution à une main."),
     ("OLL", "Orientation of the Last Layer : mettre toute la dernière face de la même couleur."),
     ("PB (personal best)", "Le meilleur temps personnel, en single ou en moyenne."),
