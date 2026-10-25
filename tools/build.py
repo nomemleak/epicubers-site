@@ -369,7 +369,7 @@ body = head("Quel cube acheter ?", "Un seul modèle conseillé, et comment évit
       <dt>Tension</dt>
       <dd>La façon dont les pièces sont tenues entre elles : un cube tendu est plus contrôlable, un cube lâche tourne plus librement mais risque de « popper ». Sur le Guhong, elle se règle avec une molette.</dd>
       <dt>MagLev (lévitation magnétique)</dt>
-      <dd>Les ressorts sont remplacés par des aimants dont les mêmes pôles se font face : ils se repoussent, et c’est cette répulsion qui assure la compression. Il y a moins de frottements, donc un cube plus libre et plus rapide. C’est ce qui rend la version MagLev du Guhong si intéressante pour son prix.</dd>
+      <dd>Une technologie qui remplace les ressorts par des aimants, qui assurent la compression à leur place. Il y a moins de frottements, donc un cube plus libre et plus rapide. C’est ce qui rend la version MagLev du Guhong si intéressante pour son prix.</dd>
     </dl>
   </div>
 </section>
@@ -611,7 +611,7 @@ G = [
     ("Lookahead", "Repérer la prochaine pièce à placer pendant qu’on exécute la précédente, pour ne pas s’arrêter."),
     ("Lubrifiant", "Un produit qu’on met à l’intérieur du cube pour le faire tourner plus vite et plus doucement."),
     ("Magnétique", "Un cube équipé d’aimants dans les pièces, qui l’aident à se centrer sur chaque face."),
-    ("MagLev", "Une technologie qui remplace les ressorts d’un cube par des aimants qui se repoussent, pour réduire les frottements."),
+    ("MagLev", "Une technologie qui remplace les ressorts d’un cube par des aimants, pour réduire les frottements."),
     ("Ressorts", "Sur un cube classique, ils maintiennent les pièces ensemble. Un cube MagLev n’en a pas."),
     ("Tension / compression", "Le serrage des pièces entre elles, réglable avec des vis ou une molette selon le modèle."),
     ("Mélange (scramble)", "La suite de mouvements générée au hasard qu’on applique avant chaque résolution."),
