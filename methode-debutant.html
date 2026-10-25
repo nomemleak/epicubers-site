@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Méthode débutant — résoudre le Rubik’s cube — EpiCubers</title>
-<meta name="description" content="Une méthode pour résoudre le Rubik’s cube avec très peu d’algorithmes, avec animations 3D de chaque séquence.">
+<meta name="description" content="Une méthode pour résoudre le Rubik’s cube avec trois algorithmes, avec animations 3D de chaque séquence.">
 <meta name="theme-color" content="#15132a">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
 <rect x="2" y="11" width="8" height="8" rx="1.5" fill="#d8cb1a"/><rect x="11" y="11" width="8" height="8" rx="1.5" fill="#4b4a96"/><rect x="20" y="11" width="8" height="8" rx="1.5" fill="#18c52b"/>
 <rect x="2" y="20" width="8" height="8" rx="1.5" fill="#dc7f1a"/><rect x="11" y="20" width="8" height="8" rx="1.5" fill="#d91c1c"/><rect x="20" y="20" width="8" height="8" rx="1.5" fill="#1a87db"/></g></svg><span>EpiCubers</span></a>
     <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
-    <nav class="nav" id="nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="speedcubing.html">Le speedcubing</a><a href="methode-debutant.html" aria-current="page">Méthode débutant</a><a href="cfop.html">CFOP</a><a href="cubes.html">Cubes</a><a href="communaute.html">Communauté</a><a href="liens.html">Liens</a><a href="glossaire.html">Glossaire</a></nav>
+    <nav class="nav" id="nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="speedcubing.html">Le speedcubing</a><a href="methodes.html" aria-current="page">Méthodes</a><a href="cubes.html">Cubes</a><a href="communaute.html">Communauté</a><a href="liens.html">Liens</a><a href="glossaire.html">Glossaire</a></nav>
   </div>
   <div class="stripe"></div>
 </header>
@@ -31,72 +31,74 @@
 
 <section>
   <div class="wrap">
-    <h2>Lire les algorithmes</h2>
+    <h2>La méthode en bref</h2>
+    <p>Six étapes, et seulement <strong>trois algorithmes</strong> à retenir :</p>
+    <ul class="clean">
+      <li>le <strong>sexy move</strong> <kbd>R U R' U'</kbd>, utilisé pour les coins blancs, la croix jaune (entouré de F et F') et les coins jaunes ;</li>
+      <li>l’algorithme de la <strong>deuxième couronne</strong>, avec sa version miroir ;</li>
+      <li>l’algorithme des <strong>arêtes jaunes</strong>, <kbd>R U R' U R U2 R' U</kbd>.</li>
+    </ul>
+    <h2 style="margin-top:36px">Lire les algorithmes</h2>
     <p>Chaque lettre est une face du cube, vue de face : <kbd>R</kbd> droite, <kbd>L</kbd> gauche, <kbd>U</kbd> haut, <kbd>D</kbd> bas, <kbd>F</kbd> devant, <kbd>B</kbd> derrière. Une lettre seule, c’est un quart de tour dans le sens des aiguilles d’une montre en regardant cette face. Une apostrophe (<kbd>R'</kbd>) inverse le sens, et un 2 (<kbd>U2</kbd>) fait un demi-tour.</p>
-    <p>Chaque algorithme est animé en 3D : appuie sur lecture pour voir la séquence, et fais glisser le cube pour le tourner.</p>
-    <div class="note draft"><p><span class="tag">Version provisoire</span>Cette méthode est en cours de relecture. Les étapes suivent la méthode par couches. La dernière étape est la variante du serveur, qui permet de finir les coins avec un seul algorithme déjà connu : le sexy move.</p></div>
+    <p>Chaque algorithme est animé en 3D : un appui sur lecture montre la séquence, et le cube peut être tourné en le faisant glisser.</p>
+    <div class="note draft"><p><span class="tag">Version provisoire</span>Cette méthode est en cours de relecture, surtout la dernière étape.</p></div>
   </div>
 </section>
 <section><div class="wrap"><div class="step"><div class="step-num" style="--c:var(--white)">1</div><div>
 <h2>La croix blanche</h2>
-<p>Pas d’algorithme ici : tu y arrives en regardant le cube. Place les quatre arêtes blanches autour du centre blanc, puis tourne chaque face pour que la deuxième couleur de l’arête soit alignée avec le centre de sa face. Tu obtiens une croix blanche, avec chaque arête qui correspond à la couleur du centre voisin.</p>
-<p>Quand c’est fait, <strong>retourne le cube</strong> : la croix blanche est maintenant en bas, et elle y reste pour la suite.</p>
+<p>Pas d’algorithme ici : tout se fait en regardant le cube. Placer les quatre arêtes blanches autour du centre blanc, puis tourner chacune pour que sa deuxième couleur soit alignée avec le centre de sa face. Cela donne une croix blanche dont chaque arête correspond au centre voisin.</p>
+<p>Ensuite, <strong>retourner le cube</strong> : la croix blanche passe en bas et y reste pour la suite.</p>
 </div></div></div></section>
 <section><div class="wrap"><div class="step"><div class="step-num" style="--c:var(--blue)">2</div><div>
 <h2>Les coins blancs</h2>
-<p>Cherche un coin blanc dans la couche du haut. Tourne la face du haut (U) pour l’amener juste au-dessus de sa place, c’est-à-dire entre les deux centres qui correspondent à ses deux autres couleurs. Tourne ensuite tout le cube pour que cette place soit en bas à droite, face à toi, puis répète le « sexy move » jusqu’à ce que le blanc soit en bas.</p><div class="algo">
+<p>Chercher un coin blanc dans la couche du haut. Tourner la face du haut (U) pour l’amener juste au-dessus de sa place, c’est-à-dire entre les deux centres qui correspondent à ses deux autres couleurs. Tourner ensuite tout le cube pour que cette place soit en bas à droite, face à soi, puis répéter le sexy move jusqu’à ce que le blanc soit en bas.</p><div class="algo">
   <div class="algo-top"><span class="algo-name">Le sexy move</span><button class="copy" type="button">Copier</button></div>
-  <code>R U R' U'</code><p class="muted" style="margin:6px 0 0">Répète-le 1 à 5 fois jusqu’à ce que le coin soit en place. C’est l’algorithme que tu utiliseras le plus.</p><div class="player-box"><twisty-player alg="R U R' U'" experimental-setup-anchor="end" visualization="3D" background="none" control-panel="bottom-row" hint-facelets="none"></twisty-player></div>
-</div><p>Fais-le pour les quatre coins. La première couche (le blanc) est terminée.</p>
+  <code>R U R' U'</code><p class="muted" style="margin:6px 0 0">À répéter 1 à 5 fois jusqu’à ce que le coin soit en place. C’est l’algorithme le plus utilisé de la méthode.</p><div class="player-box"><twisty-player alg="R U R' U'" experimental-setup-anchor="end" visualization="3D" background="none" control-panel="bottom-row" hint-facelets="none"></twisty-player></div>
+</div><p>Faire de même pour les quatre coins. La première couche (le blanc) est terminée.</p>
 </div></div></div></section>
 <section><div class="wrap"><div class="step"><div class="step-num" style="--c:var(--green)">3</div><div>
 <h2>La deuxième couronne</h2>
-<p>La face jaune est en haut. Cherche dans la couche du haut une arête qui n’a pas de jaune. Tourne U pour que sa couleur du dessus (celle qui est vers toi) s’aligne avec le centre en face, puis regarde si elle doit aller à droite ou à gauche.</p><div class="algo">
+<p>La face jaune est en haut. Chercher dans la couche du haut une arête sans jaune. Tourner U pour que sa couleur de face s’aligne avec le centre de la face de devant, puis regarder si l’arête doit aller à droite ou à gauche.</p><div class="algo">
   <div class="algo-top"><span class="algo-name">Arête vers la droite</span><button class="copy" type="button">Copier</button></div>
   <code>U R U' R' U' F' U F</code><div class="player-box"><twisty-player alg="U R U' R' U' F' U F" experimental-setup-anchor="end" visualization="3D" background="none" control-panel="bottom-row" hint-facelets="none"></twisty-player></div>
 </div><div class="algo">
   <div class="algo-top"><span class="algo-name">Arête vers la gauche</span><button class="copy" type="button">Copier</button></div>
   <code>U' L' U L U F U' F'</code><div class="player-box"><twisty-player alg="U' L' U L U F U' F'" experimental-setup-anchor="end" visualization="3D" background="none" control-panel="bottom-row" hint-facelets="none"></twisty-player></div>
-</div><p>Fais-le pour les quatre arêtes. Si une arête est déjà dans la deuxième couche mais mal placée, utilise l’algorithme avec n’importe quelle arête du haut pour la faire sortir, puis recommence.</p>
+</div><p>Faire de même pour les quatre arêtes. Si une arête est déjà dans la deuxième couronne mais mal placée, utiliser l’algorithme avec n’importe quelle arête du haut pour la faire sortir, puis recommencer.</p>
 </div></div></div></section>
 <section><div class="wrap"><div class="step"><div class="step-num" style="--c:var(--yellow)">4</div><div>
 <h2>La croix jaune</h2>
-<p>Regarde la face jaune. Tu verras un point, un « L », une barre ou déjà une croix. Tourne le cube pour mettre le « L » en haut à gauche, ou la barre à l’horizontale, puis fais l’algorithme. Recommence jusqu’à avoir une croix.</p><div class="algo">
+<p>Regarder la face jaune : on voit un point, un « L », une barre ou déjà une croix. Tourner le cube pour mettre le « L » en haut à gauche, ou la barre à l’horizontale, puis faire l’algorithme. Recommencer jusqu’à obtenir une croix.</p><div class="algo">
   <div class="algo-top"><span class="algo-name">La croix jaune</span><button class="copy" type="button">Copier</button></div>
-  <code>F R U R' U' F'</code><p class="muted" style="margin:6px 0 0">Depuis un point, tu l’enchaînes deux ou trois fois : point, puis L, puis barre, puis croix.</p><div class="player-box"><twisty-player alg="F R U R' U' F'" experimental-setup-anchor="end" visualization="3D" background="none" control-panel="bottom-row" hint-facelets="none"></twisty-player></div>
+  <code>F R U R' U' F'</code><p class="muted" style="margin:6px 0 0">C’est le sexy move entouré de F et F'. Depuis un point, l’enchaîner deux ou trois fois : point, puis L, puis barre, puis croix.</p><div class="player-box"><twisty-player alg="F R U R' U' F'" experimental-setup-anchor="end" visualization="3D" background="none" control-panel="bottom-row" hint-facelets="none"></twisty-player></div>
 </div>
 </div></div></div></section>
 <section><div class="wrap"><div class="step"><div class="step-num" style="--c:var(--orange)">5</div><div>
-<h2>Aligner les arêtes jaunes</h2>
-<p>Tourne la face du haut jusqu’à ce que le plus d’arêtes possible correspondent à la couleur de leur centre. Si deux arêtes voisines sont bonnes, mets-les à l’arrière et à droite, puis fais l’algorithme. Si deux arêtes opposées sont bonnes, fais-le une fois depuis n’importe quel côté, puis reprends depuis le cas précédent.</p><div class="algo">
+<h2>Les arêtes jaunes</h2>
+<p>Tourner la face du haut jusqu’à ce que le plus d’arêtes possible correspondent à la couleur de leur centre. Si deux arêtes voisines sont bonnes, les placer à l’arrière et à droite, puis faire l’algorithme. Si deux arêtes opposées sont bonnes, faire l’algorithme une fois depuis n’importe quel côté, puis reprendre depuis le cas précédent. Répéter jusqu’à ce que les quatre arêtes soient alignées.</p><div class="algo">
   <div class="algo-top"><span class="algo-name">Aligner les arêtes</span><button class="copy" type="button">Copier</button></div>
   <code>R U R' U R U2 R' U</code><div class="player-box"><twisty-player alg="R U R' U R U2 R' U" experimental-setup-anchor="end" visualization="3D" background="none" control-panel="bottom-row" hint-facelets="none"></twisty-player></div>
 </div>
 </div></div></div></section>
 <section><div class="wrap"><div class="step"><div class="step-num" style="--c:var(--red)">6</div><div>
-<h2>Placer les coins</h2>
-<p>Regarde les quatre coins jaunes, sans te soucier de leur orientation : un coin est « à sa place » quand ses trois couleurs correspondent aux trois centres autour de lui. Cherche-en un qui est bien placé et tiens-le en haut à droite, face à toi, puis fais l’algorithme. Recommence jusqu’à ce que les quatre coins soient à leur place. Si aucun n’est bien placé, fais l’algorithme une fois depuis n’importe quel côté, puis cherche de nouveau.</p><div class="algo">
-  <div class="algo-top"><span class="algo-name">Placer les coins</span><button class="copy" type="button">Copier</button></div>
-  <code>U R U' L' U R' U' L</code><p class="muted" style="margin:6px 0 0">Il déplace trois coins en cercle et laisse tout le reste du cube à sa place.</p><div class="player-box"><twisty-player alg="U R U' L' U R' U' L" experimental-setup-anchor="end" visualization="3D" background="none" control-panel="bottom-row" hint-facelets="none"></twisty-player></div>
-</div>
-</div></div></div></section>
-<section><div class="wrap"><div class="step"><div class="step-num" style="--c:var(--white)">7</div><div>
-<h2>Tourner les coins et finir</h2>
-<div class="note draft"><p><span class="tag">À relire</span>Cette fin est la variante du serveur : au lieu de retourner le cube pour placer les coins un à un, on les tourne directement avec le sexy move et un quart de tour de la face du bas.</p></div>
-<p><strong>Retourne le cube</strong> : la face jaune est maintenant en bas. Regarde le coin en bas à droite, face à toi, et répète le sexy move jusqu’à ce que le jaune soit tourné vers le bas. Les couches du haut ont l’air de se mélanger pendant ce temps, c’est normal : elles se remettent en place quand le coin est terminé.</p>
-<p>Ensuite, tourne seulement la face du bas (D) pour amener le coin suivant en bas à droite, sans tourner le cube, et recommence. Après le dernier coin, tourne D pour aligner la couche du bas. Le cube est résolu.</p><div class="algo">
+<h2>Les coins jaunes</h2>
+<div class="note draft"><p><span class="tag">À confirmer</span>Cette étape est la partie propre à la méthode du serveur : les coins ne sont pas mis à leur place avant d’être orientés, ils sont placés au fur et à mesure. La description est à compléter.</p></div>
+<p><strong>Retourner le cube</strong> : la face jaune passe en bas. Placer les coins jaunes un par un : tourner D pour amener le coin au-dessus de son emplacement, puis répéter le sexy move jusqu’à ce que le coin soit en place. Les couches du haut se mélangent en route, c’est normal.</p><div class="algo">
   <div class="algo-top"><span class="algo-name">Le sexy move, encore</span><button class="copy" type="button">Copier</button></div>
   <code>R U R' U'</code>
-</div>
+</div><h3>Le cas particulier</h3>
+<p>Il peut rester deux coins côte à côte qui ne sont pas résolus. Il suffit de refaire la même chose : les placer en bas, puis répéter le sexy move jusqu’à ce qu’ils soient bien placés.</p>
+<p>Un dernier quart de tour de D aligne la couche du bas. Le cube est résolu.</p>
 </div></div></div></section>
 <section>
   <div class="wrap">
     <h2>Pour aller plus loin en vidéo</h2>
+    <p>Ces vidéos montrent la méthode débutant classique. Elle ressemble à celle-ci, sauf pour la fin (placement des coins).</p>
     <div class="grid c2">
-      <a class="card" href="https://youtu.be/7Ron6MN45LY"><h3>Méthode débutant, en anglais</h3><p>La version qu’on recommande de préférence.</p><span class="go">Voir sur YouTube</span></a>
-      <a class="card" href="https://youtu.be/PLsT1SY1cgg"><h3>Méthode débutant, en français</h3><p>Pour suivre dans ta langue.</p><span class="go">Voir sur YouTube</span></a>
+      <a class="card" href="https://youtu.be/7Ron6MN45LY"><h3>Méthode débutant, en anglais</h3><p>La version conseillée de préférence.</p><span class="go">Voir sur YouTube</span></a>
+      <a class="card" href="https://youtu.be/PLsT1SY1cgg"><h3>Méthode débutant, en français</h3><p>Pour suivre dans sa langue.</p><span class="go">Voir sur YouTube</span></a>
     </div>
-    <p style="margin-top:24px">Quand tu descends sous la minute et que tu veux aller plus vite, passe à la <a href="cfop.html">méthode CFOP</a>.</p>
+    <p style="margin-top:24px">Quand le cube se résout en moins d’une minute et qu’on veut aller plus vite, la suite est la <a href="cfop-simplifiee.html">CFOP simplifiée</a>.</p>
   </div>
 </section>
 
