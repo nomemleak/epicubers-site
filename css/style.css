@@ -202,3 +202,5 @@ dl.gloss .hide { display: none; }
 h3 { margin-top: 0; }
 .pick > * { min-width: 0; }
 @media (max-width: 800px) { .pick { grid-template-columns: minmax(0, 1fr); } }
+.step > * { min-width: 0; }
+@media (max-width: 600px) { .step { grid-template-columns: minmax(0, 1fr); } }

@@ -88,6 +88,29 @@
 </div><h3>Le cas particulier</h3>
 <p>Il peut rester deux coins côte à côte qui ne sont pas résolus. Il suffit de refaire la même chose : les placer en bas, puis répéter le sexy move jusqu’à ce qu’ils soient bien placés.</p>
 <p>Un dernier quart de tour de D aligne la couche du bas. Le cube est résolu.</p>
+
+<h3>Comment le sexy move agit sur les coins</h3>
+<p>Le sexy move <kbd>R U R' U'</kbd> répété <strong>2 ou 4 fois</strong> ne fait que tourner des coins sur eux-mêmes, sans rien déplacer. Répété <strong>1, 3 ou 5 fois</strong>, il fait aussi monter le coin en bas à droite devant, pendant qu’un coin de la couche du haut descend à sa place. C’est ce qui permet de ranger les coins jaunes un par un : ils se déposent en bas, bien orientés, pendant que les coins blancs bougent le temps qu’il faut, puis reviennent à leur place.</p>
+
+<h3>Un exemple complet</h3>
+<p>Voici une vraie résolution, du mélange jusqu’au cube fini. La dernière phase, celle des coins jaunes, se lit ainsi :</p>
+<div class="algo"><div class="algo-top"><span class="algo-name">Les coins jaunes dans cet exemple</span><button class="copy" type="button">Copier</button></div>
+<code>x2 (R U R' U')4 D (R U R' U') D2 (R U R' U')5 D' (R U R' U')3 D' (R U R' U')3 D' (R U R' U')2 z (R U R' U')2 D (R U R' U')4 D'</code></div>
+<div class="table-wrap"><table>
+<thead><tr><th>Mouvements</th><th>Ce qui se passe</th></tr></thead>
+<tbody>
+<tr><td><kbd>x2</kbd></td><td>Le cube est retourné : les coins jaunes sont en bas. Le coin en bas à droite devant est à sa place, mais tourné.</td></tr>
+<tr><td><kbd>(R U R' U')4</kbd></td><td>Après 4 sexy moves, le jaune de ce coin est tourné vers le bas.</td></tr>
+<tr><td><kbd>D</kbd>, <kbd>(R U R' U')</kbd></td><td>Un quart de tour de D amène un autre coin en bas à droite devant. Un seul sexy move le fait monter, et un coin blanc descend à sa place.</td></tr>
+<tr><td><kbd>D2</kbd>, <kbd>(R U R' U')5</kbd></td><td>Le coin monté redescend, cette fois bien orienté.</td></tr>
+<tr><td><kbd>D'</kbd>, <kbd>(R U R' U')3</kbd></td><td>Même principe : un coin jaune est déposé en bas, bien orienté.</td></tr>
+<tr><td><kbd>D'</kbd>, <kbd>(R U R' U')3</kbd></td><td>Idem : le coin blanc remonte à sa place.</td></tr>
+<tr><td><kbd>D'</kbd></td><td>Les quatre coins jaunes sont à leur place. Il reste le cas particulier : deux coins côte à côte à tourner.</td></tr>
+<tr><td><kbd>(R U R' U')2</kbd>, <kbd>z</kbd>, <kbd>(R U R' U')2</kbd></td><td>Le cube est tourné pour amener ces deux coins en bas, devant, puis on les tourne avec le sexy move.</td></tr>
+<tr><td><kbd>D</kbd>, <kbd>(R U R' U')4</kbd>, <kbd>D'</kbd></td><td>Dernier coin tourné, puis la couche du bas est alignée. Le cube est résolu.</td></tr>
+</tbody></table></div>
+<p>La résolution entière, mélange compris, se rejoue ci-dessous. Le même exemple est aussi sur <a href="https://alg.cubing.net/?setup=L2_F2_R2_U2_B2_D_F2_D_B2_D-_F2_U2_F_U2_L-_D-_R_U-_L_R_B_R-&alg=x2-DRDLF-D-F2LRU-R-y-URU-R-y2-RUR-U-yRU-R-y-U2RU-R-yU-L-ULy-U2L-ULy-URU-R-L-ULy-URU-R-U2L-ULy-URU-R-yU-RU-R-yU-L-ULy-FRUR-U-RUR-U-F-U2RUR-URU2R-Ux2(RUR-U-)4D(RUR-U-)D2(RUR-U-)5D-(RUR-U-)3D-(RUR-U-)3D-(RUR-U-)2z(RUR-U-)2D(RUR-U-)4D-">alg.cubing.net</a>.</p>
+<div class="player-box"><twisty-player experimental-setup-alg="L2 F2 R2 U2 B2 D F2 D B2 D' F2 U2 F U2 L' D' R U' L R B R'" alg="x2 D R D L F' D' F2 L R U' R' y' U R U' R' y2 (R U R' U') y R U' R' y' U2 R U' R' y U' L' U L y' U2 L' U L y' U R U' R' L' U L y' U R U' R' U2 L' U L y' U R U' R' y U' R U' R' y U' L' U L y' F (R U R' U')2 F' U2 R U R' U R U2 R' U x2 (R U R' U')4 D (R U R' U') D2 (R U R' U')5 D' (R U R' U')3 D' (R U R' U')3 D' (R U R' U')2 z (R U R' U')2 D (R U R' U')4 D'" visualization="3D" background="none" control-panel="bottom-row" hint-facelets="none"></twisty-player></div>
 </div></div></div></section>
 <section>
   <div class="wrap">
