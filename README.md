@@ -23,6 +23,7 @@ Le dépôt peut être servi tel quel par n'importe quel hébergeur statique (Git
 ```
 index.html, speedcubing.html, communaute.html, cubes.html, liens.html, glossaire.html
 methodes.html            comparaison des trois méthodes
+notation.html            la notation internationale (faces, mouvements, rotations)
 methode-debutant.html    méthode débutant (3 algorithmes)
 cfop-simplifiee.html     CFOP simplifiée (14 algorithmes, avec vidéos)
 cfop.html                CFOP complète (renvoi vers SpeedCubeDB)
@@ -49,7 +50,6 @@ La page `cubes.html` affiche `assets/guhong-pro-m.jpg`. Si le fichier manque, l'
 ## À savoir
 
 - Les animations 3D des algorithmes de la page méthode débutant utilisent [cubing.js](https://js.cubing.net/cubing/) chargé depuis un CDN.
-- La dernière étape de la méthode débutant est marquée « à confirmer ».
 - Les prix du guide d'achat sont indicatifs et datés dans la page.
 
 ## Transparence sur l'IA

@@ -193,3 +193,12 @@ dl.gloss .hide { display: none; }
 .size h3 { font-family: var(--mono); color: var(--gold); }
 .brands dt { font-weight: 800; font-size: 1.15rem; margin-top: 18px; }
 .brands dd { margin: 4px 0 0; max-width: 68ch; }
+
+/* Page notation */
+.net { width: 100%; height: auto; max-height: 300px; display: block; }
+.demo h3 { margin-bottom: 6px; }
+.demo .mv { font-size: 1.15rem; }
+.demo .player-box twisty-player { height: 190px; }
+h3 { margin-top: 0; }
+.pick > * { min-width: 0; }
+@media (max-width: 800px) { .pick { grid-template-columns: minmax(0, 1fr); } }
